@@ -23,7 +23,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools <=67
+    - setuptools <=63
   run:
     - pygobject
     - python
