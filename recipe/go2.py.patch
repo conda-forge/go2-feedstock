@@ -1,8 +1,0 @@
---- go2.py
-+++ go2.py
-@@ -1,4 +1,4 @@
--#!/usr/bin/python3
-+#!/usr/bin/python3 -W ignore::DeprecationWarning
- # -*- coding:utf-8; tab-width:4; mode:python -*-
- 
- # go2.py
