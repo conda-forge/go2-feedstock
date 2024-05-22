@@ -1,5 +1,5 @@
 {% set name = "go2" %}
-{% set version = "2.20170703" %}
+{% set version = "2.20201116.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 20e443fc51ea66ed03d0b9c47cc22c6e7f8a55f52cde8dc0e60928fd4f2e9e6c
+  sha256: 54e436839a6f5e26e57cc671edd93641b66cad83dfb08ba211e27bff2559c31c
   patches:
-    - go2.py.patch
     - setup.py.patch
 
 build:
-  number: 4
+  number: 0
   # go2 does not run on Windows
   skip: True  # [win]
 
@@ -23,6 +22,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
     - pygobject
     - python
