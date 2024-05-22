@@ -1,0 +1,12 @@
+--- go2.py.orig	2024-05-22 18:21:41.684294846 +0200
++++ go2.py.new	2024-05-22 19:04:19.635371720 +0200
+@@ -64,6 +64,9 @@
+ import argparse
+ from osfs import OSFS, ResourceNotFoundError
+ 
++import warnings
++warnings.filterwarnings("ignore", category=DeprecationWarning)
++
+ ESC = 27
+ CTRL_C = 3
+ ENTER = 13
