@@ -9,10 +9,11 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 54e436839a6f5e26e57cc671edd93641b66cad83dfb08ba211e27bff2559c31c
   patches:
+    - go2.py.patch
     - setup.py.patch
 
 build:
-  number: 2
+  number: 3
   # go2 does not run on Windows
   skip: true  # [win]
 
