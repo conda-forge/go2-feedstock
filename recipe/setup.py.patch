@@ -1,5 +1,10 @@
-47c47,48
-<       ]
----
->       ],
->       packages=['go2', 'osfs']
+--- setup.py
++++ setup.py
+@@ -44,5 +44,6 @@
+       long_description_content_type="text/markdown",
+       classifiers=[
+         "Programming Language :: Python :: 3",
+-      ]
++      ],
++      packages=['go2', 'osfs']
+       )
