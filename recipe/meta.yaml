@@ -9,10 +9,11 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 54e436839a6f5e26e57cc671edd93641b66cad83dfb08ba211e27bff2559c31c
   patches:
+    - go2.py.patch
     - setup.py.patch
 
 build:
-  number: 2
+  number: 3
   # go2 does not run on Windows
   skip: true  # [win]
 
@@ -37,6 +38,7 @@ test:
     - test -f ${PREFIX}/lib/go2/osfs.py
     - test -f ${PREFIX}/share/man/man1/go2.1
     - cat ${PREFIX}/bin/go2
+    - head -10 ${PREFIX}/lib/go2/go2.py
     - grep -r "/lib/" ${PREFIX}/lib/go2
     - grep -r "/lib/" ${PREFIX}/share/man/man1/
     # go2 --setup returns a 1 if already run and conda-forge runs multiple
