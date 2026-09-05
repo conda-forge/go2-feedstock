@@ -10,3 +10,12 @@
  ESC = 27
  CTRL_C = 3
  ENTER = 13
+@@ -88,7 +91,7 @@
+ GO2ERRORS  = os.path.join(GO2DIR, 'errors')
+ 
+ ACTIVATION_CMD = "[ -e /usr/lib/go2/go2.sh ] && source /usr/lib/go2/go2.sh"
+-CD_MODE_CMD = """
++CD_MODE_CMD = r"""
+ function go2-cd() {
+   if type go2 &> /dev/null; then
+     go2 --cd $*
